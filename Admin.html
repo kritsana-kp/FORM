@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin</title>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="max-w-3xl mx-auto py-8">
+        <h1 class="md:text-4xl font-bold text-center bg-gradient-to-r from-red-500 via-yellow-500 to-green-700 bg-clip-text text-transparent sm:text-8xl">ร้านค้าขายของที่ระลึก 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
+        <form action="" method="post" class="bg-white shadow-md rounded-lg p-8 space-y-10">
+            <!-- เสื้อ -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">เสื้อ</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="productsize-shirt" class="block font-medium mb-1">ขนาดสินค้า</label>
+                        <select name="productsize-shirt" id="productsize-shirt" class="w-full border rounded px-3 py-2">
+                            <option value="">--กรุณาเลือกขนาด--</option>
+                            <option value="SS">SS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                            <option value="3XL">3XL</option>
+                            <option value="4XL">4XL</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="block font-medium mb-1">สี</span>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="prdcolor-shirt" value="white" class="mr-1">ขาว</label>
+                            <label><input type="radio" name="prdcolor-shirt" value="black" class="mr-1">ดำ</label>
+                            <label><input type="radio" name="prdcolor-shirt" value="blue" class="mr-1">น้ำเงิน</label>
+                            <label><input type="radio" name="prdcolor-shirt" value="gray" class="mr-1">เทา</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-medium mb-1">ราคา</label>
+                        <p class="bg-gray-50 rounded px-3 py-2">329</p>
+                    </div>
+                    <div>
+                        <label for="quantity-shirt" class="block font-medium mb-1">จำนวนสินค้า</label>
+                        <input type="number" name="quantity-shirt" id="quantity-shirt" min="1" class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block font-medium mb-1">รายละเอียดสินค้า</label>
+                        <p class="bg-gray-50 rounded px-3 py-2 text-sm">
+                            เสื้อโปโล <br>
+                            Size SS : รอบอก 36 นิ้ว ความยาว 25 นิ้ว <br>
+                            Size S : รอบอก 38 นิ้วความยาว 26 นิ้ว <br>
+                            Size M : รอบอก 40 นิ้วความยาว 27 นิ้ว <br>
+                            Size L : รอบอก 42 นิ้วความยาว 28 นิ้ว <br>
+                            Size XL : รอบอก 44 นิ้ว ความยาว 29 นิ้ว <br>
+                            Size 2XL : รอบอก 46 นิ้ว ความยาว 29 นิ้ว <br>
+                            Size 3XL : รอบอก 48 นิ้ว ความยาว 30 นิ้ว <br>
+                            Size 4XL : รอบอก 50 นิ้ว ความยาว 31 นิ้ว <br>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="startdate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (เริ่มต้น)</label>
+                    <input type="date" name="startdate" id="startdate"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="enddate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (สิ้นสุด)</label>
+                    <input type="date" name="enddate" id="enddate" min="2023-10-01" max="2025-07-31"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+                    <div>
+                        <label for="image-shirt" class="block font-medium mb-1">รูปภาพ</label>
+                        <input type="file" name="image-shirt" id="image-shirt" accept="image-shirt/*" class="block w-full text-sm text-gray-500">
+                    </div>
+                </div>
+            </section>
+            <!-- กระเป๋าผ้า -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">กระเป๋าผ้า</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="productsize-bag" class="block font-medium mb-1">ขนาดสินค้า</label>
+                        <select name="productsize-bag" id="productsize-bag" class="w-full border rounded px-3 py-2">
+                            <option value="">--กรุณาเลือกขนาด--</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="block font-medium mb-1">สี</span>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="prdcolor-bag" value="cream" class="mr-1">ครีม</label>
+                            <label><input type="radio" name="prdcolor-bag" value="navy" class="mr-1">กรมท่า</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="price-bag" class="block font-medium mb-1">ราคา</label>
+                        <select name="price-bag" id="price-bag" class="w-full border rounded px-3 py-2">
+                            <option value="M">M = 99</option>
+                            <option value="L">L = 149</option>
+                            <option value="XL">XL = 199</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantity-bag" class="block font-medium mb-1">จำนวนสินค้า</label>
+                        <input type="number" name="quantity-bag" id="quantity-bag" min="1" class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block font-medium mb-1">รายละเอียดสินค้า</label>
+                        <p class="bg-gray-50 rounded px-3 py-2 text-sm">
+                            กระเป๋าผ้า Cotton 100% <br>
+                            Size M : กว้าง 12 นิ้ว ยาว 14 นิ้ว <br>
+                            Size L : กว้าง 16 นิ้ว ยาว 18 นิ้ว <br>
+                            Size XL : กว้าง 20 นิ้ว ยาว 22 นิ้ว <br>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="startdate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (เริ่มต้น)</label>
+                    <input type="date" name="startdate" id="startdate"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="enddate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (สิ้นสุด)</label>
+                    <input type="date" name="enddate" id="enddate" min="2023-10-01" max="2025-07-31"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+                    <div>
+                        <label for="image-bag" class="block font-medium mb-1">รูปภาพ</label>
+                        <input type="file" name="image-bag" id="image-bag" accept="image-bag/*" class="block w-full text-sm text-gray-500">
+                    </div>
+                </div>
+            </section>
+            <!-- แก้วเก็บความเย็น -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">แก้วเก็บความเย็น</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="productsize-cup" class="block font-medium mb-1">ขนาดสินค้า</label>
+                        <select name="productsize-cup" id="productsize-cup" class="w-full border rounded px-3 py-2">
+                            <option value="">--กรุณาเลือกขนาด--</option>
+                            <option value="M">20 oz.</option>
+                            <option value="L">30 oz.</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="block font-medium mb-1">สี</span>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="prdcolor-cup" value="silver" class="mr-1">เงิน</label>
+                            <label><input type="radio" name="prdcolor-cup" value="white" class="mr-1">ขาว</label>
+                            <label><input type="radio" name="prdcolor-cup" value="black" class="mr-1">ดำ</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="price-cup" class="block font-medium mb-1">ราคา</label>
+                        <select name="price-cup" id="price-cup" class="w-full border rounded px-3 py-2">
+                            <option value="M">20 oz. = 239</option>
+                            <option value="L">30 oz. = 279</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantity-cup" class="block font-medium mb-1">จำนวนสินค้า</label>
+                        <input type="number" name="quantity-cup" id="quantity-cup" min="1" class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block font-medium mb-1">รายละเอียดสินค้า</label>
+                        <p class="bg-gray-50 rounded px-3 py-2 text-sm">
+                            แก้วเก็บความเย็น <br>
+                            ขนาด 20 Oz. : กว้าง 3 นิ้ว สูง 7 นิ้ว <br>
+                            ขนาด 30 Oz. : กว้าง 4 นิ้ว สูง 8 นิ้ว <br>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="startdate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (เริ่มต้น)</label>
+                    <input type="date" name="startdate" id="startdate"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="enddate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (สิ้นสุด)</label>
+                    <input type="date" name="enddate" id="enddate" min="2023-10-01" max="2025-07-31"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+                    <div>
+                        <label for="image-cup" class="block font-medium mb-1">รูปภาพ</label>
+                        <input type="file" name="image-cup" id="image-cup" accept="image-cup/*" class="block w-full text-sm text-gray-500">
+                    </div>
+                </div>
+            </section>
+            <!-- หมวก -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">หมวก</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="productsize-cap" class="block font-medium mb-1">ขนาด</label>
+                        <select name="productsize-cap" id="productsize-cap" class="w-full border rounded px-3 py-2">
+                            <option value="">--กรุณาเลือกขนาด--</option>
+                            <option value="cap">ปรับได้</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="block font-medium mb-1">สี</span>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="prdcolor-cap" value="white" class="mr-1">ขาว</label>
+                            <label><input type="radio" name="prdcolor-cap" value="black" class="mr-1">ดำ</label>
+                            <label><input type="radio" name="prdcolor-cap" value="blue" class="mr-1">น้ำเงิน</label>
+                            <label><input type="radio" name="prdcolor-cap" value="green" class="mr-1">เขียว</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-medium mb-1">ราคา</label>
+                        <p class="bg-gray-50 rounded px-3 py-2">159</p>
+                    </div>
+                    <div>
+                        <label for="quantity-cap" class="block font-medium mb-1">จำนวนสินค้า</label>
+                        <input type="number" name="quantity-cap" id="quantity-cap" min="1" class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block font-medium mb-1">รายละเอียดสินค้า</label>
+                        <p class="bg-gray-50 rounded px-3 py-2 text-sm">
+                            หมวกแก๊ปปักลาย สไตล์วินเทจ <br>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="startdate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (เริ่มต้น)</label>
+                    <input type="date" name="startdate" id="startdate"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="enddate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (สิ้นสุด)</label>
+                    <input type="date" name="enddate" id="enddate" min="2023-10-01" max="2025-07-31"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+                    <div>
+                        <label for="image-cap" class="block font-medium mb-1">รูปภาพ</label>
+                        <input type="file" name="image-cap" id="image-cap" accept="image-cap/*" class="block w-full text-sm text-gray-500">
+                    </div>
+                </div>
+            </section>
+            <!-- ร่ม -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">ร่ม</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="productsize-umbrella" class="block font-medium mb-1">ขนาดสินค้า</label>
+                        <select name="productsize-umbrella" id="productsize-umbrella" class="w-full border rounded px-3 py-2">
+                            <option value="">--กรุณาเลือกขนาด--</option>
+                            <option value="umbrella">พับเก็บได้ 3 ตอน</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="block font-medium mb-1">สี</span>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="prdcolor-umbrella" value="pink" class="mr-1">ชมพู</label>
+                            <label><input type="radio" name="prdcolor-umbrella" value="black" class="mr-1">ดำ</label>
+                            <label><input type="radio" name="prdcolor-umbrella" value="blue" class="mr-1">น้ำเงิน</label>
+                            <label><input type="radio" name="prdcolor-umbrella" value="green" class="mr-1">เขียว</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-medium mb-1">ราคา</label>
+                        <p class="bg-gray-50 rounded px-3 py-2">79</p>
+                    </div>
+                    <div>
+                        <label for="quantity-umbrella" class="block font-medium mb-1">จำนวนสินค้า</label>
+                        <input type="number" name="quantity-umbrella" id="quantity-umbrella" min="1" class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block font-medium mb-1">รายละเอียดสินค้า</label>
+                        <p class="bg-gray-50 rounded px-3 py-2 text-sm">
+                            ร่มพับเก็บได้ 3 ตอน <br>
+                            น้ำหนักเบา พกพาสะดวก <br>
+                            กันแสง uv กันแดด กันฝน <br>
+                            ขนาดเมื่อพับเก็บ สูง 26 cm. <br>
+                            ขนาดเมื่อกางออก กว้าง 96 cm. สูง 65 cm. <br>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="startdate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (เริ่มต้น)</label>
+                    <input type="date" name="startdate" id="startdate"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="enddate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (สิ้นสุด)</label>
+                    <input type="date" name="enddate" id="enddate" min="2023-10-01" max="2025-07-31"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+                    <div>
+                        <label for="image-umbrella" class="block font-medium mb-1">รูปภาพ</label>
+                        <input type="file" name="image-umbrella" id="image-umbrella" accept="image-umbrella/*" class="block w-full text-sm text-gray-500">
+                    </div>
+                </div>
+            </section>
+            <!-- สมุด -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">สมุด</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="productsize-notebook" class="block font-medium mb-1">ขนาดสินค้า</label>
+                        <select name="productsize-notebook" id="productsize-notebook" class="w-full border rounded px-3 py-2">
+                            <option value="">--กรุณาเลือกขนาด--</option>
+                            <option value="A6">A6</option>
+                            <option value="A5">A5</option>
+                            <option value="B5">B5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="block font-medium mb-1">สี</span>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="prdcolor-notebook" value="white" class="mr-1">ขาว</label>
+                            <label><input type="radio" name="prdcolor-notebook" value="black" class="mr-1">ดำ</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="price-notebook" class="block font-medium mb-1">ราคา</label>
+                        <select name="price-notebook" id="price-notebook" class="w-full border rounded px-3 py-2">
+                            <option value="A6">A6 = 17</option>
+                            <option value="A5">A5 = 23</option>
+                            <option value="B5">B5 = 31</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantity-notebook" class="block font-medium mb-1">จำนวนสินค้า</label>
+                        <input type="number" name="quantity-notebook" id="quantity-notebook" min="1" class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block font-medium mb-1">รายละเอียดสินค้า</label>
+                        <p class="bg-gray-50 rounded px-3 py-2 text-sm">
+                            สมุดโน้ตริมลวด <br>
+                            ขนาด A6 : 145x113mm. <br>
+                            ขนาด A5 : 203x150mm. <br>
+                            ขนาด B5 : 250x180mm. <br>
+                            จำนวนหน้า : 100 หน้า <br>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="startdate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (เริ่มต้น)</label>
+                    <input type="date" name="startdate" id="startdate"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="enddate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (สิ้นสุด)</label>
+                    <input type="date" name="enddate" id="enddate" min="2023-10-01" max="2025-07-31"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+                    <div>
+                        <label for="image-notebook" class="block font-medium mb-1">รูปภาพ</label>
+                        <input type="file" name="image-notebook" id="image-notebook" accept="image-notebook/*" class="block w-full text-sm text-gray-500">
+                    </div>
+                </div>
+            </section>
+            <!-- ปากกา -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">ปากกา</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="productsize-pen" class="block font-medium mb-1">ขนาดสินค้า</label>
+                        <select name="productsize-pen" id="productsize-pen" class="w-full border rounded px-3 py-2">
+                            <option value="">--กรุณาเลือกขนาด--</option>
+                            <option value="0.7mm">0.7mm</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="block font-medium mb-1">สี</span>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="prdcolor-pen" value="black" class="mr-1">ดำ</label>
+                            <label><input type="radio" name="prdcolor-pen" value="blue" class="mr-1">น้ำเงิน</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="price-pen" class="block font-medium mb-1">ราคา</label>
+                        <select name="price-pen" id="price-pen" class="w-full border rounded px-3 py-2">
+                            <option value="0.7mm">359</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantity-pen" class="block font-medium mb-1">จำนวนสินค้า</label>
+                        <input type="number" name="quantity-pen" id="quantity-pen" min="1" class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block font-medium mb-1">รายละเอียดสินค้า</label>
+                        <p class="bg-gray-50 rounded px-3 py-2 text-sm">
+                            ชุดกิ๊ฟเซ็ตปากกาโลหะ <br>
+                            ขนาด 0.7mm : ปลายปากกา 0.7 มม. <br>
+                            สีด้าม : สีดำ (ด้าน) <br>
+                            ฟรี! กล่องใส่ปากกา <br>
+                            จำนวน 1 ชุด บรรจุ 1 ด้าม / กล่อง <br> 
+                            ฟรี! สกรีนโลโก้สาขาวิชาวิทยาการคอมพิวเตอร์ <br>
+                            และ สกรีนชื่อ <br>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="startdate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (เริ่มต้น)</label>
+                    <input type="date" name="startdate" id="startdate"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="enddate" class="block text-gray-700 font-medium mb-1">วันที่ขาย (สิ้นสุด)</label>
+                    <input type="date" name="enddate" id="enddate" min="2023-10-01" max="2025-07-31"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+                    <div>
+                        <label for="image-pen" class="block font-medium mb-1">รูปภาพ</label>
+                        <input type="file" name="image-pen" id="image-pen" accept="image-pen/*" class="block w-full text-sm text-gray-500">
+                    </div>
+                </div>
+            </section>
+            <div class="flex justify-between mt-6">
+                <input type="submit" value="บันทึกข้อมูล"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded shadow">
+                <input type="reset" value="ล้างข้อมูล"
+                    class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold px-6 py-2 rounded shadow">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
